@@ -1,0 +1,74 @@
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex cnw.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe<cnw.txt
+1 IDENTIFIER "a"
+ 2 CONSTANT "10"
+
+3 IDENTIFIER "b"
+ 4 CONSTANT "20"
+
+5 OTHER "a62"
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex no.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe
+
+Enter mobile Number: 8608801112
+Mobile number Valid.
+
+Enter mobile Number: 0123456789
+Mobile number Invalid.
+
+Enter mobile Number: 92
+Mobile number Invalid.
+
+Enter mobile Number:
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex email.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe<email.txt
+valid
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex date.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe
+
+Enter Date: 25/09/2021
+Date valid.
+
+Enter: 35/02/2021
+Date Invalid.
+
+Enter:
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex token.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex counta.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe<input.txt
+count= 2
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>flex token.l
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>gcc lex.yy.c
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>a.exe<token.txt
+
+ token : int
+
+ token : boolean
+
+ token : main
+
+ token : float
+ total no. of token = 4
+
+C:\Users\Haja Javed Ahmed\Desktop\flex_pgm>
