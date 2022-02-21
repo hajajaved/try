@@ -1,12 +1,8 @@
-%{
-double memvar;
-%}
 %union
 {
 double dval;
 }
 %token<dval>NUMBER
-%token<dval>MEM
 %token LOG SINE nLOG COS TAN
 %left '-' '+'
 %left '*' '/'
@@ -19,8 +15,7 @@ start:statement'\n'
 |start statement'\n'
 ;
 
-statement:MEM'='expression {memvar=$3;}
-| expression{printf("Answer=%g\n",$1);}
+statement:expression{printf("Answer=%g\n",$1);}
 ;
 expression:expression'+'expression {$$=$1+$3;}
 | expression '-' expression {$$=$1-$3;}
@@ -41,7 +36,6 @@ expression:'-'expression %prec UMINUS{$$=-$2;}
 |COS expression {$$=cos($2*3.14/180);}
 |TAN expression {$$=tan($2*3.14/180);}
 |NUMBER {$$=$1;}
-|MEM {$$=memvar;}
 ;
 %%
 int yywrap(void){}

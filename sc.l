@@ -3,19 +3,12 @@
 #include<math.h>
 %}
 %%
-([0-9]+|([0-9]*\.[0-9]+)([eE][-+]?[0-9]+)?) {yylval.dval=atof(yytext);return
+[0-9]+|([0-9]*\.[0-9]+) {yylval.dval=atof(yytext);return
 NUMBER;}
-log |
-LOG {return LOG;}
+log {return LOG;}
 In {return nLOG;}
-sin |
-SIN {return SINE;}
-cos |
-COS {return COS;}
-tan |
-TAN {return TAN;}
-mem {return MEM;}
-[\t];
-\$ return 0;
+sin {return SINE;}
+cos {return COS;}
+tan {return TAN;}
 \n|. return yytext[0];
 %%
