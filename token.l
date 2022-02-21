@@ -13,7 +13,7 @@ int n = 0 ;
   
 "<="|"=="|"="|"++"|"-"|"*"|"+" {n++;printf("\n token : %s", yytext);}
   
-[(){}|, ;]    {n++;printf("\n token : %s", yytext);} 
+[(){}|,;]    {n++;printf("\n token : %s", yytext);} 
   
 [0-9]*"."[0-9]+ {n++;printf("\n token : %s", yytext);}  
   
