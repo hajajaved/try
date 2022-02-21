@@ -1,0 +1,4 @@
+int
+boolean
+main
+float
